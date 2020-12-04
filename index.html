@@ -421,7 +421,110 @@ exit(0);
 					
 					<div class="content-wrapper">
 						<p>
+						<pre>
+ #include &ltstdio.h&gt
+ #include &ltmath.h&gt
+ int main(void)
+ {
+	int lato ;
+	int riga, colonna ;
+	printf("Inserisci il lato del quadrato: ") ;
+	scanf("%d",&lato) ;
+	if ( lato &lt= 0 )
+    			printf("Errore, il lato deve essere maggiore di zero\n") ;
+	else
+		{
+    			riga = 0 ;
+    			while ( riga &lt lato )
+        			{
+            				colonna = 0 ;
+					while ( colonna &lt lato )
+                				{
+                    					if ( colonna &lt= riga )
+                        						printf("*") ;
+                    					else
+                        						printf("+") ;
+                        						colonna = colonna + 1 ;
+                				}
+            			printf("\n") ;
+            			riga = riga + 1 ;
+        			}
+ 		}
+ 	exit(0) ;
+ }
+						</pre>
 							</p>
+					<p>// C O M M E N T I //</p>
+					<p>
+						<pre>
+#include &ltstdio.h&gt
+#include &ltstdlib.h&gt
+
+int main(void)
+	{
+		int lato ; /* lato del quadrato */
+		
+		int riga, colonna ; /* riga e colonna del quadrato */
+		
+ /* LEGGI IL LATO DEL QUADRATO */
+
+		printf("Inserisci il lato del quadrato: ") ;
+		
+		scanf("%d",&lato) ;
+		
+ /* CONTROLLA SE IL LATO DEL QUADRATO E’ UN NUMERO MAGGIORE DI 0 */
+
+		if ( lato &lt= 0 )
+		
+				printf("Errore, il lato deve essere maggiore di zero\n") ;
+		else
+			{
+			
+ /* IL CICLO PIU’ ESTERNO SCANDISCE LA RIGHE DEL QUADRATO */
+
+ /* INIZIALIZZA LA VARIABILE PER LA SCANSIONE DELLE RIGHE DEL QUADRATO */
+
+				riga = 0 ;
+				
+				while ( riga &lt lato )
+					{
+					
+ /* IL CICLO PIU’ INTERNO SCANDISCE LE COLONNE DEL QUADRATO */
+
+ /*INIZIALIZZA LA VARIABILE PER LA SCANSIONE DELLE COLONNE DEL QUADRATO */
+
+						colonna = 0 ;
+
+						while ( colonna &lt lato )
+								{
+								
+ /* SE colonna <= riga STAMPA "*" ALTRIMENTI STAMPA "+" */
+ 
+									if ( colonna &lt= riga )
+									
+											printf("*") ;
+									else
+									
+											printf("+") ;
+											
+ /* INCREMENTA "colonna" PER PASSARE ALLA COLONNA SUCCESSIVA */
+ 
+									colonna = colonna + 1 ;
+					}
+					
+ /* TERMINATA LA STAMPA DI UNA RIGA SI DEVE RIPORTARE IL CURSORE AL MARGINE SINISTRO DELLO SCHERMO */
+ 
+					printf("\n") ;
+					
+ /* INCREMENTA "riga" PER PASSARE ALLA RIGA SUCCESSIVA */
+ 
+					riga = riga + 1 ;
+			}
+		}
+	exit(0) ;
+ }
+						</pre>
+						</p>
 					</div>
 				</div> <!-- .cd-project-info -->
 			</li>
